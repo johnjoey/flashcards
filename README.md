@@ -1,8 +1,4 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 ## Getting Started
-
-First, run the development server:
 
 ```bash
 npm run dev
@@ -20,17 +16,28 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Spec
 
-To learn more about Next.js, take a look at the following resources:
+### potential tech stack
+- hosting: Vercel
+- frontend: Next.js 16 (app router)
+- AWS API Gateway + Lambda functions
+- DB: DynamoDB
+- File storage: S3
+- Auth: cognito
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### overview of features
+- Create a new flashcard
+- organise cards into groups
+- create a quiz from one or more groups
+- save flashcards and fetch (DB stuff)
+- bulk upload via .csv
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### baby steps
+- [ ] hello world app in Next.js 16 hosted on Vercel
+- [ ] create a lambda to read and write to DynamoDB
+- [ ] setup API Gateway to trigger the lambda
+- [ ] connect Next.js app to the API Gateway endpoint (press a button and do a thing with DDB)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### stretch goals
+- [] user auth with cognito
